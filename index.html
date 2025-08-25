@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YouTube Clone (Simple)</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <button class="hamburger" id="hamburger" aria-label="Toggle sidebar">☰</button>
+    <div class="logo">YouTube</div>
+
+    <form class="search-bar" id="searchForm" role="search">
+      <input id="searchInput" type="search" placeholder="Search" aria-label="Search videos"/>
+      <button type="submit" aria-label="Search">🔍</button>
+    </form>
+
+    <div class="user-icons">
+      <span title="Create">📹</span>
+      <span title="Notifications">🔔</span>
+      <span title="Profile">🙂</span>
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <nav>
+      <ul>
+        <li class="active">🏠 Home</li>
+        <li>🔥 Trending</li>
+        <li>📺 Subscriptions</li>
+        <li>📚 Library</li>
+        <li>🕒 History</li>
+        <li>👍 Liked videos</li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="content">
+    <div class="chips">
+      <button class="chip active" data-chip="all">All</button>
+      <button class="chip" data-chip="music">Music</button>
+      <button class="chip" data-chip="tech">Tech</button>
+      <button class="chip" data-chip="gaming">Gaming</button>
+      <button class="chip" data-chip="comedy">Comedy</button>
+      <button class="chip" data-chip="cats">Cats</button>
+    </div>
+
+    <section class="grid" id="videoGrid">
+      <!-- Sample cards (add/remove as you like) -->
+      <article class="video-card" data-tags="tech">
+        <img src="cat.jpg.jpg" alt="Thumbnail - JS Tips"/>
+        <div class="video-info">
+          <h3 class="video-title">DIML vlog</h3>
+          <p class="channel-name">Code Cafe</p>
+          <p class="video-stats">540K views • 6 months ago</p>
+        </div>
+      </article>
+
+      <article class="video-card" data-tags="music">
+        <img src="live.jpg.jpg" alt="Thumbnail - Chill Beats"/>
+        <div class="video-info">
+          <h3 class="video-title">Lo-Fi Beats to Study/Relax</h3>
+          <p class="channel-name">Twilight</p>
+          <p class="video-stats">3.1M views • 1 year ago</p>
+        </div>
+      </article>
+
+      <article class="video-card" data-tags="cats comedy">
+        <img src="chill.jpg.jpg" alt="Thumbnail - Funny Cats"/>
+        <div class="video-info">
+          <h3 class="video-title">Funny Cats Compilation 2025</h3>
+          <p class="channel-name">Cat Lovers</p>
+          <p class="video-stats">3.8M views • 1 week ago</p>
+        </div>
+      </article>
+
+      <article class="video-card" data-tags="tech">
+        <img src="sk.jpg.jpg" alt="Thumbnail - React"/>
+        <div class="video-info">
+          <h3 class="video-title">sandy's playlist)</h3>
+          <p class="channel-name">code cafe</p>
+          <p class="video-stats">1.2M views • 2 years ago</p>
+        </div>
+      </article>
+
+      
+
+      
+    <p id="noResults" class="no-results" hidden>No results found. Try different keywords.</p>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
